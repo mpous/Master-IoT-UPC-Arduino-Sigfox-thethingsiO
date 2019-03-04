@@ -1,6 +1,6 @@
 function main(params, callback){
   
-  var temp = (parseInt(params.payload.data, 16));
+  var temp = (parseInt(params.data, 16));
   console.log("TEMP = "+temp);
   
   var result = [
@@ -9,25 +9,25 @@ function main(params, callback){
         "value": temp
     }, {
       "key": "snr",
-      "value": params.payload.snr
+      "value": params.custom.snr
     }, {
       "key": "time",
-      "value": params.payload.time
+      "value": params.custom.time
     }, {
       "key": "duplicate",
-      "value": params.payload.duplicate
+      "value": params.custom.duplicate
     }, {
       "key": "station",
-      "value": params.payload.station
+      "value": params.custom.station
     }, {
       "key": "avgSnr",
-      "value": params.payload.avgSnr
+      "value": params.custom.avgSnr
     }, {
       "key": "rssi",
-      "value": params.payload.rssi
+      "value": params.custom.rssi
     },{
       "key": "seqNumber",
-      "value": params.payload.seqNumber
+      "value": params.custom.seqNumber
     },{
       "key": "lastAccess",
       "value": moment().isDST() ? moment().add(1, 'hour').toISOString() : moment().add(2, 'hour').toISOString()
