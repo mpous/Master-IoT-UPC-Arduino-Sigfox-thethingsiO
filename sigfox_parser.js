@@ -1,4 +1,3 @@
-
 function main(params, callback){
   
   var temp = (parseInt(params.payload.data, 16));
@@ -32,9 +31,7 @@ function main(params, callback){
     },{
       "key": "lastAccess",
       "value": moment().isDST() ? moment().add(1, 'hour').toISOString() : moment().add(2, 'hour').toISOString()
-    }
-    ];
-
+    }];
     callback(null, result); 
   
 }
